@@ -112,7 +112,7 @@ Or open the project in your IDE and run `Main.java` directly.
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 | Constant | Location | Default | Description |
 |---|---|---|---|
@@ -129,7 +129,7 @@ drawPanel.addSource(new LightSource(new Circle(x, y, radius, Color.YELLOW, true)
 
 ---
 
-## 🛠️ Technologies
+## Technologies
 
 | Technology | Role |
 |---|---|
@@ -142,7 +142,7 @@ No external libraries or build tools are required.
 
 ---
 
-## ⚠️ Known Limitations
+## Known Limitations
 
 - **Single-target accuracy**: `RayTracer.solveSteps` handles multiple targets, but when a miss is detected early, `solveTillBoundary` is called inside the inner loop — a later hit on another target can still set `t_min` correctly, though the early boundary call is redundant. For correctness with many targets, the boundary fallback should only run after the full target loop.
 - **Circles only**: The `Geometry` base class is designed to support other shapes, but only `Circle` is currently implemented.
@@ -150,6 +150,17 @@ No external libraries or build tools are required.
 
 ---
 
-## 📄 License
+## Possible extensions
+- Multithread the ray solver to improve speed of the application.
+- Add reflections usings Snells law.
+- Add support for different geometries.
+
+## Generative AI use
+- Creating the Java Docs.
+- Debugging the solveSteps method.
+- Generating this README file.
+---
+
+## License
 
 MIT License — see [LICENSE](LICENSE) for details.
